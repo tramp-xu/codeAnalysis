@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+      body {
+        background: #fafafa;
+        font-family: sans-serif;
+      }
+      h1 {
+        font-weight: normal;
+      }
+      .btn {
+        display: inline-block;
+        cursor: pointer;
+        background: #fff;
+        box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+        padding: .5em .8em;
+        transition: box-shadow .05s ease-in-out;
+        -webkit-transition: box-shadow .05s ease-in-out;
+      }
+      .btn:hover {
+        box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+      }
+      .btn:active, .active, .active:hover {
+        box-shadow: 0 0 1px rgba(0, 0, 0, .2),
+                    inset 0 0 4px rgba(0, 0, 0, .1);
+      }
+      .add {
+        float: right;
+      }
+      #container {
+        max-width: 42em;
+        margin: 0 auto 2em auto;
+      }
+      .list {
+        position: relative;
+      }
+      .row {
+        overflow: hidden;
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        left: 0px;
+        margin: .5em 0;
+        padding: 1em;
+        background: #fff;
+        box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+        transition: transform .5s ease-in-out, opacity .5s ease-out, left .5s ease-in-out;
+        -webkit-transition: transform .5s ease-in-out, opacity .5s ease-out, left .5s ease-in-out;
+      }
+      .row div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .row > div:nth-child(1) {
+        width: 5%;
+      }
+      .row > div:nth-child(2) {
+        width: 30%;
+      }
+      .row > div:nth-child(3) {
+        width: 65%;
+      }
+      .rm-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #C25151;
+        width: 1.4em;
+        height: 1.4em;
+        text-align: center;
+        line-height: 1.4em;
+        padding: 0;
+      }
+      .changeText{
+        height: 30px;
+      }
+    </style>
+  <title>Document</title>
+</head>
+<body>
+  <script src="./htmldomapi.js"></script>
+  <script src="./attributes.js"></script>
+  <script src="./class.js"></script>
+  <script src="./dataset.js"></script>
+  <script src="./eventlisteners.js"></script>
+  <script src="./hero.js"></script>
+  <script src="./props.js"></script>
+  <script src="./style.js"></script>
+  <script src="./h.js"></script>
+  <script src="./snabbdom.js"></script>
+  <script>
+    var patch = snabbdom.init([attributesModule, classModule, datasetModule, eventListenersModule, propsModule, styleModule]);
+
+    var vnode;
+
+    debugger
+
+    var nextKey = 11;
+    var margin = 8;
+    var sortBy = 'rank';
+    var totalHeight = 0;
+    var data = [
+      {rank: 1, title: 'The Shawshank Redemption', desc: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', elmHeight: 0}
+    ];
+
+    function changeText(prop) {
+      alert('讲真的，我要变身了')
+      var str = '看，变了吧。我就是测试一下一条数据的text发生变化是什么情况'
+      vnode = patch(vnode, view('.test',str));
+    }
+
+    function view(cla, str) {
+      return h('div#container' + cla, {class: {'actives': true}, on: {click: [changeText, 'desc']}}, str);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      var container = document.getElementById('container');
+      var data = '我是最开始的文本, 点我'
+      vnode = patch(container, view('',data));
+    });
+
+  </script>
+  <div id="container"></div>
+</body>
+</html>
