@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <table
+      class="table-mini-screen"
+      width="80%"
+      cellspacing="0"
+      border="0"
+      style="border-radius:4px 4px 0 0;border: 1px solid rgb(239, 239, 239);border-bottom: 0;"
+    >
+      <thead>
+        <tr bgcolor="#296AB4" style="height: 3.4em;" class="firstRow">
+          <td
+            colspan="3"
+            style="border-color: #296AB4; border-collapse: collapse;border-radius:4px 0 0 0;padding: 0.5em 0 0.5em 1.67em;text-align: left;"
+          >
+            <p
+              style="
+                font-size: 1.1em;
+                font-weight: bold;
+                color: #FFFFFF;
+                font-family: Microsoft YaHei;"
+            >
+              {{Summary}}&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="
+                    text-align: center;
+                    word-break: keep-all;
+                    height: 1em;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 4px;
+                    font-family: Microsoft YaHei;
+                    font-size: 0.9em;
+                    color: #FFFFFF;
+                    line-height: 1em;
+                "
+                >&nbsp;&nbsp;{{DenseLevel}}&nbsp;&nbsp;</span
+              >
+            </p>
+          </td>
+          <td
+            colspan="1"
+            style="border-color: #296AB4;border-collapse: collapse;border-radius:0 4px 0 0;padding: 0.5em 1.67em 0.5em 1.67em;text-align: right;"
+          >
+            <p
+              style="font-family: Microsoft YaHei;
+         font-size: 1.1em;
+         color: #FFFFFF;
+         "
+            >
+              BPM
+            </p>
+          </td>
+        </tr>
+      </thead>
+    </table>
+    <table
+      class="table-mini-screen"
+      width="80%"
+      cellspacing="0"
+      border="0"
+      style="border-left: 1px solid rgb(239, 239, 239);border-right: 1px solid rgb(239, 239, 239);border-bottom: 0;border-top: 0;"
+      data-sort="sortDisabled"
+    >
+      <thead></thead>
+      <tbody>
+        <tr class="firstRow">
+          <td
+            class="ltd"
+            style="width: 7.1em;padding-left: 1.67em; line-height: 2.2em;height: 2.2em;vertical-align: text-top;border-bottom:1px solid #EFEFEF; font-family: Microsoft YaHei;font-size: 1em;color: #777777;"
+          >
+            <span
+              style='color: rgb(119, 119, 119); font-family: "Microsoft YaHei"; white-space: normal;'
+              >文件类型</span
+            >
+          </td>
+          <td
+            style="vertical-align: text-top;line-height: 2.2em;border-bottom:1px solid #EFEFEF;font-family: Microsoft YaHei;font-size: 1em;color: #000000;"
+            rowspan="1"
+            colspan="3"
+          >
+            <span style='font-family: "Microsoft YaHei"; white-space: normal;'
+              >{{FileType}}</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="ltd"
+            style="width: 7.1em;padding-left: 1.67em; line-height: 2.2em;height: 2.2em;vertical-align: text-top;border-bottom:1px solid #EFEFEF; font-family: Microsoft YaHei;font-size: 1em;color: #777777;"
+          >
+            <p style="width: 4.8em;height: 2.2em;line-height: 2.2em;">
+              部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门
+            </p>
+          </td>
+          <td
+            style="vertical-align: text-top;line-height: 2.2em;border-bottom:1px solid #EFEFEF;font-family: Microsoft YaHei;font-size: 1em;color: #000000;"
+          >
+            {{Branch}}
+          </td>
+          <td
+            class="ltd"
+            style="width: 7.1em;padding-left: 1.67em; line-height: 2.2em;height: 2.2em;vertical-align: text-top;border-bottom:1px solid #EFEFEF; font-family: Microsoft YaHei;font-size: 1em;color: #777777;"
+          >
+            <p style="width: 4.8em;height: 2.2em;line-height: 2.2em;">
+              发布范围
+            </p>
+          </td>
+          <td
+            style="vertical-align: text-top;line-height: 2.2em;border-bottom:1px solid #EFEFEF;font-family: Microsoft YaHei;font-size: 1em;color: #000000;"
+          >
+            {{ReleaseRange}}
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="ltd"
+            style="width: 7.1em;padding-left: 1.67em; line-height: 2.2em;height: 2.2em;vertical-align: text-top;border-bottom:1px solid #EFEFEF; font-family: Microsoft YaHei;font-size: 1em;color: #777777;"
+          >
+            <p style="width: 4.8em;height: 2.2em;line-height: 2.2em;">提交人</p>
+          </td>
+          <td
+            style="vertical-align: text-top;line-height: 2.2em;border-bottom:1px solid #EFEFEF;font-family: Microsoft YaHei;font-size: 1em;color: #000000;"
+          >
+            {{NameCN}}
+          </td>
+          <td
+            class="ltd"
+            style="width: 7.1em;padding-left: 1.67em; line-height: 2.2em;height: 2.2em;vertical-align: text-top;border-bottom:1px solid #EFEFEF; font-family: Microsoft YaHei;font-size: 1em;color: #777777;"
+          >
+            <p style="width: 4.8em;height: 2.2em;line-height: 2.2em;">
+              发布方法
+            </p>
+          </td>
+          <td
+            style="vertical-align: text-top;line-height: 2.2em;border-bottom:1px solid #EFEFEF;font-family: Microsoft YaHei;font-size: 1em;color: #000000;"
+          >
+            {{ReleseMode}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table
+      class="table-mini-screen"
+      width="80%"
+      cellspacing="0"
+      border="0"
+      style="border-radius: 4px 4px 0px 0px; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(239, 239, 239); border-bottom-color: rgb(239, 239, 239); border-left-color: rgb(239, 239, 239); border-image: initial; border-top-style: initial; border-top-color: initial;"
+    >
+      <thead></thead>
+      <tbody>
+        <tr class="firstRow">
+          <td
+            class="ltd"
+            style="width: 7.1em;padding-left: 1.67em; line-height: 2.2em;height: 2.2em;vertical-align: text-top;border-bottom:1px solid #EFEFEF; font-family: Microsoft YaHei;font-size: 1em;color: #777777;"
+          >
+            <p style="width: 4.8em;height: 2.2em;line-height: 2.2em;">
+              任务清单
+            </p>
+          </td>
+          <td
+            colspan="3"
+            style="vertical-align: text-top;line-height: 2.2em;border-bottom:1px solid #EFEFEF;font-family: Microsoft YaHei;font-size: 1em;color: #000000;"
+          >
+            {{TaskDetailList}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table
+      class="table-mini-screen"
+      width="80%"
+      cellspacing="0"
+      border="0"
+      style="border-radius: 4px 4px 0px 0px; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(239, 239, 239); border-bottom-color: rgb(239, 239, 239); border-left-color: rgb(239, 239, 239); border-image: initial; border-top-style: initial; border-top-color: initial;"
+    >
+      <thead></thead>
+      <tbody>
+        <tr class="firstRow">
+          <td
+            class="ltd"
+            style="width: 7.1em;padding-left: 1.67em; line-height: 2.2em;height: 2.2em;vertical-align: text-top;border-bottom:1px solid #EFEFEF; font-family: Microsoft YaHei;font-size: 1em;color: #777777;"
+          >
+            <p style="width: 4.8em;height: 2.2em;line-height: 2.2em;">
+              签发领导
+            </p>
+          </td>
+          <td
+            colspan="3"
+            style="vertical-align: text-top;line-height: 2.2em;border-bottom:1px solid #EFEFEF;font-family: Microsoft YaHei;font-size: 1em;color: #000000;"
+          >
+            {{FileRequestHistoryLists}}
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="ltd"
+            style="width: 7.1em;padding-left: 1.67em; line-height: 2.2em;height: 2.2em;vertical-align: text-top; font-family: Microsoft YaHei;font-size: 1em;color: #777777;"
+          >
+            <p style="width: 4.8em;height: 2.2em;line-height: 2.2em;">
+              附件列表
+            </p>
+          </td>
+          <td
+            style="vertical-align: text-top;line-height: 2.2em;font-family: Microsoft YaHei;font-size: 1em;color: #000000;"
+            colspan="3"
+          >
+            {{AttachmentLists}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
